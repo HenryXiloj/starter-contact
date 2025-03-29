@@ -820,31 +820,41 @@
         formGroup.classList.remove('invalid');
         errorElement.textContent = '';
       }
-    });
-    
-    // Apply language to all elements with data-i18n attribute
-    function applyLanguage(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          element.textContent = translations[lang][key];
-          
-          // Special case for input placeholders
-          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            const placeholderKey = key + 'Placeholder';
-            if (translations[lang][placeholderKey]) {
-              element.setAttribute('placeholder', translations[lang][placeholderKey]);
+
+      // Updated applyLanguage function with error clearing
+      function applyLanguage(lang) {
+        // Clear all validation errors first
+        document.querySelectorAll('.form-group').forEach(group => {
+          group.classList.remove('invalid');
+          const errorElement = group.querySelector('.error-message');
+          if (errorElement) {
+            errorElement.textContent = '';
+          }
+        });
+
+        // Apply translations
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+            
+            // Handle input placeholders
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              const placeholderKey = key + 'Placeholder';
+              if (translations[lang][placeholderKey]) {
+                element.setAttribute('placeholder', translations[lang][placeholderKey]);
+              }
             }
           }
-        }
-      });
-      
-      // Update html lang attribute
-      document.documentElement.setAttribute('lang', lang);
-      
-      // Update current language display
-      document.getElementById('currentLanguage').textContent = lang.toUpperCase();
-    }
+        });
+        
+        // Update HTML lang attribute
+        document.documentElement.setAttribute('lang', lang);
+        
+        // Update language display
+        document.getElementById('currentLanguage').textContent = lang.toUpperCase();
+      }
+    });
   </script>
 </body>
 </html>
