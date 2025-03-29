@@ -3,65 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spring Boot GCP Starter Kit</title>
+  <title>Cloud DevXperts - Cloud & DevOps Solutions</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-    header { background: #2d2dff; color: white; padding: 2rem 1rem; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+    header { background: #0057b8; color: white; padding: 2.5rem 1rem; text-align: center; }
+    header h1 { font-size: 2.8rem; margin: 0; }
     header p { font-size: 1.2rem; margin-top: 0.5rem; }
-    .section { padding: 2rem 1rem; max-width: 800px; margin: auto; }
-    .section h2 { color: #2d2dff; }
-    ul { list-style: none; padding-left: 1rem; }
-    ul li::before { content: "✅ "; color: green; }
-    .pricing { background: #fff; border-radius: 8px; padding: 1rem; margin-top: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+    nav a { margin: 0 12px; color: white; text-decoration: none; font-weight: bold; }
+
+    .section { padding: 2rem 1rem; max-width: 900px; margin: auto; }
+    .section h2 { color: #0057b8; }
+
+    .features ul { list-style: none; padding-left: 0; }
+    .features li::before { content: \"🚀 \"; margin-right: 5px; }
+
+    .pricing { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
     .contact-form { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    input, textarea { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 4px; border: 1px solid #ccc; }
-    button { background: #2d2dff; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; }
+    input, textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border-radius: 4px; border: 1px solid #ccc; }
+    button { background: #0057b8; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #0044a5; }
+
     footer { text-align: center; padding: 1rem; background: #222; color: white; margin-top: 2rem; }
-    a { color: #2d2dff; text-decoration: none; }
+    a { color: #0057b8; text-decoration: none; }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Spring Boot + GCP Starter Kit</h1>
-    <p>Deploy Secure Spring Boot Apps to GCP in Minutes</p>
-    <a href="https://github.com/HenryXiloj" target="_blank">
-      <button>View on GitHub</button>
-    </a>
+    <h1>Cloud DevXperts</h1>
+    <p>Your Partner in Scalable Cloud, DevOps, and Backend Solutions</p>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="section">
-    <h2>Who Is This For?</h2>
-    <p>🧠 Developers building Spring Boot apps on GCP<br>
-    💼 Teams that need production-ready CI/CD pipelines<br>
-    🔐 Anyone tired of manually configuring secrets, logging, and infra</p>
-  </section>
-
-  <section class="section">
-    <h2>Features</h2>
-    <ul>
-      <li>Java 21 + Spring Boot 3.4.x</li>
-      <li>GitHub Actions CI/CD to GKE</li>
-      <li>Terraform Infra (GKE, SQL, Secret Manager, IAM)</li>
-      <li>Monitoring with Stackdriver</li>
-      <li>Security best practices baked in</li>
-      <li>Modular and customizable</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Pricing</h2>
-    <div class="pricing">
-      <p><strong>💥 Free Version:</strong> Open-source on GitHub</p>
-      <p><strong>🚀 Pro Version:</strong> Advanced modules + setup support</p>
-      <p><strong>🧑‍💼 Custom Setup:</strong> Contact me for tailored deployment</p>
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="features">
+      <ul>
+        <li>Infrastructure as Code with Terraform & Pulumi</li>
+        <li>Cloud Deployments with GCP, Kubernetes, Cloud SQL</li>
+        <li>CI/CD Pipelines using GitHub Actions, Skaffold & Helm</li>
+        <li>Spring Boot Microservices (Java 17 & 21)</li>
+        <li>Secure REST API Design with OpenAPI</li>
+        <li>Monitoring & Logging using Stackdriver</li>
+        <li>Batch Processing with Shell Scripting & Control-M</li>
+        <li>Automation Workflows via Google Cloud Scheduler & Workflows</li>
+      </ul>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="pricing">
+    <h2>Pricing & Engagement</h2>
+    <div class="pricing">
+      <p><strong>Starter Package:</strong> Free open-source tools & templates on GitHub</p>
+      <p><strong>Pro Setup:</strong> Guided setup & configuration tailored to your needs</p>
+      <p><strong>Enterprise Support:</strong> Full-service consulting, deployment & automation</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
     <h2>About Me</h2>
-    <p>Henry Xiloj Herrera – Cloud Engineer | Open Source Contributor | Blogger</p>
+    <p>Hi! I'm Henry Xiloj Herrera — a passionate Software Engineer, Cloud Architect, and Open Source Contributor. I help teams deliver robust backend services and automate cloud infrastructure using modern DevOps practices.</p>
+    <p>Follow my work:</p>
     <p>
       <a href="https://github.com/HenryXiloj" target="_blank">GitHub</a> |
       <a href="https://jarmx.blogspot.com" target="_blank">Blog</a> |
@@ -69,7 +77,7 @@
     </p>
   </section>
 
-  <section class="section">
+  <section class="section" id="contact">
     <h2>Contact Me</h2>
     <form class="contact-form" action="https://formspree.io/f/xwplnnpl" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -80,7 +88,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Henry Xiloj Herrera · Built with ❤️</p>
+    <p>© 2025 Cloud DevXperts · Crafted by Henry Xiloj Herrera</p>
   </footer>
 
 </body>
