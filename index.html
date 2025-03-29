@@ -308,6 +308,56 @@
       text-decoration: underline;
     }
     
+    /* Language selector styles */
+    .language-selector {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 100;
+    }
+    
+    .language-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .language-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .language-dropdown {
+      position: absolute;
+      right: 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: none;
+    }
+    
+    .language-dropdown.show {
+      display: block;
+    }
+    
+    .language-option {
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .language-option:hover {
+      background: #f0f0f0;
+    }
+    
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -336,98 +386,102 @@
       .pricing-cards {
         grid-template-columns: 1fr;
       }
+      
+      .language-selector {
+        top: 0.5rem;
+        right: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <button class="language-btn" id="languageBtn">
+      <i class="fas fa-globe"></i>
+      <span id="currentLanguage">EN</span>
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="language-dropdown" id="languageDropdown">
+      <div class="language-option" data-lang="en">
+        <span>🇬🇧</span> English
+      </div>
+      <div class="language-option" data-lang="es">
+        <span>🇪🇸</span> Español
+      </div>
+    </div>
+  </div>
+
   <header>
-    <h1>Cloud DevXperts</h1>
-    <p>Your Partner in Scalable Cloud, DevOps, and Backend Solutions</p>
+    <h1 data-i18n="companyName">Cloud DevXperts</h1>
+    <p data-i18n="companyTagline">Your Partner in Scalable Cloud, DevOps, and Backend Solutions</p>
     <nav>
-      <a href="#services"><i class="fas fa-cogs"></i> Services</a>
-      <a href="#expertise"><i class="fas fa-lightbulb"></i> Expertise</a>
-      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="#services"><i class="fas fa-cogs"></i> <span data-i18n="navServices">Services</span></a>
+      <a href="#expertise"><i class="fas fa-lightbulb"></i> <span data-i18n="navExpertise">Expertise</span></a>
+      <a href="#contact"><i class="fas fa-envelope"></i> <span data-i18n="navContact">Contact</span></a>
     </nav>
   </header>
 
   <section class="section" id="services">
-    <h2>Our Services</h2>
+    <h2 data-i18n="servicesTitle">Our Services</h2>
     <div class="features">
       <ul>
-        <li><strong>Infrastructure as Code</strong> with Terraform & Pulumi</li>
-        <li><strong>Cloud Deployments</strong> with GCP, Kubernetes, Cloud SQL</li>
-        <li><strong>CI/CD Pipelines</strong> using GitHub Actions, Skaffold & Helm</li>
-        <li><strong>Spring Boot Microservices</strong> (Java 17 & 21)</li>
-        <li><strong>Secure REST API Design</strong> with OpenAPI</li>
-        <li><strong>Monitoring & Logging</strong> using Stackdriver</li>
-        <li><strong>Batch Processing</strong> with Shell Scripting & Control-M</li>
-        <li><strong>Automation Workflows</strong> via Google Cloud Scheduler & Workflows</li>
+        <li><strong data-i18n="service1Title">Infrastructure as Code</strong> <span data-i18n="service1Desc">with Terraform & Pulumi</span></li>
+        <li><strong data-i18n="service2Title">Cloud Deployments</strong> <span data-i18n="service2Desc">with GCP, Kubernetes, Cloud SQL</span></li>
+        <li><strong data-i18n="service3Title">CI/CD Pipelines</strong> <span data-i18n="service3Desc">using GitHub Actions, Skaffold & Helm</span></li>
+        <li><strong data-i18n="service4Title">Spring Boot Microservices</strong> <span data-i18n="service4Desc">(Java 17 & 21)</span></li>
+        <li><strong data-i18n="service5Title">Secure REST API Design</strong> <span data-i18n="service5Desc">with OpenAPI</span></li>
+        <li><strong data-i18n="service6Title">Monitoring & Logging</strong> <span data-i18n="service6Desc">using Stackdriver</span></li>
+        <li><strong data-i18n="service7Title">Batch Processing</strong> <span data-i18n="service7Desc">with Shell Scripting & Control-M</span></li>
+        <li><strong data-i18n="service8Title">Automation Workflows</strong> <span data-i18n="service8Desc">via Google Cloud Scheduler & Workflows</span></li>
       </ul>
     </div>
   </section>
 
   <section class="section" id="expertise">
-    <h2>Our Expertise</h2>
-    <p>With over 10 years of experience in cloud architecture and software development, we bring deep technical knowledge and proven solutions to every project:</p>
+    <h2 data-i18n="expertiseTitle">Our Expertise</h2>
+    <p data-i18n="expertiseIntro">With over 10 years of experience in cloud architecture and software development, we bring deep technical knowledge and proven solutions to every project:</p>
     
     <div class="pricing-cards">
       <div class="pricing-card">
-        <h3>Cloud & DevOps</h3>
+        <h3 data-i18n="expertise1Title">Cloud & DevOps</h3>
         <ul>
-          <li>Google Cloud Platform (GCP)</li>
-          <li>Kubernetes (GKE)</li>
-          <li>Terraform & Pulumi</li>
-          <li>Cloud Deploy & Skaffold</li>
-          <li>Helm & Docker</li>
+          <li data-i18n="expertise1Item1">Google Cloud Platform (GCP)</li>
+          <li data-i18n="expertise1Item2">Kubernetes (GKE)</li>
+          <li data-i18n="expertise1Item3">Terraform & Pulumi</li>
+          <li data-i18n="expertise1Item4">Cloud Deploy & Skaffold</li>
+          <li data-i18n="expertise1Item5">Helm & Docker</li>
         </ul>
       </div>
       <div class="pricing-card">
-        <h3>Backend Development</h3>
+        <h3 data-i18n="expertise2Title">Backend Development</h3>
         <ul>
-          <li>Java (Spring Boot 3)</li>
-          <li>REST APIs & OpenAPI</li>
-          <li>Microservices Architecture</li>
-          <li>Database Integration</li>
-          <li>Batch Processing</li>
+          <li data-i18n="expertise2Item1">Java (Spring Boot 3)</li>
+          <li data-i18n="expertise2Item2">REST APIs & OpenAPI</li>
+          <li data-i18n="expertise2Item3">Microservices Architecture</li>
+          <li data-i18n="expertise2Item4">Database Integration</li>
+          <li data-i18n="expertise2Item5">Batch Processing</li>
         </ul>
       </div>
       <div class="pricing-card">
-        <h3>Automation & Security</h3>
+        <h3 data-i18n="expertise3Title">Automation & Security</h3>
         <ul>
-          <li>GitHub Actions</li>
-          <li>CI/CD Pipelines</li>
-          <li>Stackdriver Monitoring</li>
-          <li>IAM & Security</li>
-          <li>Shell Scripting</li>
+          <li data-i18n="expertise3Item1">GitHub Actions</li>
+          <li data-i18n="expertise3Item2">CI/CD Pipelines</li>
+          <li data-i18n="expertise3Item3">Stackdriver Monitoring</li>
+          <li data-i18n="expertise3Item4">IAM & Security</li>
+          <li data-i18n="expertise3Item5">Shell Scripting</li>
         </ul>
       </div>
     </div>
   </section>
-
-  <!-- Testimonials Section (commented out for now - will add when we have clients) -->
-  <!--
-  <section class="section" id="testimonials">
-    <h2>Client Testimonials</h2>
-    <div class="testimonials">
-      <div class="testimonial-card">
-        <p>"Cloud DevXperts transformed our infrastructure with their Terraform expertise, reducing our deployment times by 70% while improving reliability."</p>
-        <div class="client">- CTO, E-Commerce Platform</div>
-      </div>
-      
-      <div class="testimonial-card">
-        <p>"Their Spring Boot microservices implementation gave us the scalability we needed to handle 5x traffic growth during peak seasons."</p>
-        <div class="client">- Lead Developer, SaaS Company</div>
-      </div>
-    </div>
-  </section>
-  -->
 
   <section class="section" id="about">
-    <h2>About Cloud DevXperts</h2>
-    <p>Cloud DevXperts is a specialized consultancy focused on helping businesses leverage cloud technologies and DevOps practices to build scalable, reliable systems.</p>
+    <h2 data-i18n="aboutTitle">About Cloud DevXperts</h2>
+    <p data-i18n="aboutText1">Cloud DevXperts is a specialized consultancy focused on helping businesses leverage cloud technologies and DevOps practices to build scalable, reliable systems.</p>
     
-    <p>Founded by Henry Xiloj Herrera, we combine deep technical expertise with a passion for solving complex challenges through automation and best practices. Our approach emphasizes clean architecture, security, and maintainability from day one.</p>
+    <p data-i18n="aboutText2">Founded by Henry Xiloj Herrera, we combine deep technical expertise with a passion for solving complex challenges through automation and best practices. Our approach emphasizes clean architecture, security, and maintainability from day one.</p>
     
     <div class="social-links">
       <a href="https://github.com/HenryXiloj" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -438,35 +492,235 @@
   </section>
 
   <section class="section" id="contact">
-    <h2>Get In Touch</h2>
-    <p>Ready to discuss your project or learn how we can help? Send us a message and we'll get back to you within 24 hours.</p>
+    <h2 data-i18n="contactTitle">Get In Touch</h2>
+    <p data-i18n="contactText">Ready to discuss your project or learn how we can help? Send us a message and we'll get back to you within 24 hours.</p>
     
     <form class="contact-form" action="https://formspree.io/f/xwplnnpl" method="POST">
       <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required>
+        <label for="name" data-i18n="formName">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="" required>
       </div>
       
       <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+        <label for="email" data-i18n="formEmail">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="" required>
       </div>
       
       <div class="form-group">
-        <label for="message">How can we help you?</label>
-        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+        <label for="message" data-i18n="formMessage">How can we help you?</label>
+        <textarea id="message" name="message" rows="5" placeholder="" required></textarea>
       </div>
       
-      <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+      <button type="submit" class="btn" data-i18n="formSubmit">Send Message <i class="fas fa-paper-plane"></i></button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 <strong>Cloud DevXperts</strong> · Cloud & DevOps Specialists</p>
+    <p>© 2025 <strong>Cloud DevXperts</strong> <span data-i18n="footerText">· Cloud & DevOps Specialists</span></p>
     <p><a href="https://github.com/HenryXiloj" target="_blank">GitHub</a> | 
-       <a href="https://jarmx.blogspot.com/" target="_blank">Blog</a> | 
+       <a href="https://jarmx.blogspot.com/" target="_blank" data-i18n="footerBlog">Blog</a> | 
        <a href="https://www.linkedin.com/in/henry-xiloj-herrera/" target="_blank">LinkedIn</a></p>
   </footer>
 
+  <script>
+    // Language configuration
+    const translations = {
+      en: {
+        companyName: "Cloud DevXperts",
+        companyTagline: "Your Partner in Scalable Cloud, DevOps, and Backend Solutions",
+        navServices: "Services",
+        navExpertise: "Expertise",
+        navContact: "Contact",
+        servicesTitle: "Our Services",
+        service1Title: "Infrastructure as Code",
+        service1Desc: "with Terraform & Pulumi",
+        service2Title: "Cloud Deployments",
+        service2Desc: "with GCP, Kubernetes, Cloud SQL",
+        service3Title: "CI/CD Pipelines",
+        service3Desc: "using GitHub Actions, Skaffold & Helm",
+        service4Title: "Spring Boot Microservices",
+        service4Desc: "(Java 17 & 21)",
+        service5Title: "Secure REST API Design",
+        service5Desc: "with OpenAPI",
+        service6Title: "Monitoring & Logging",
+        service6Desc: "using Stackdriver",
+        service7Title: "Batch Processing",
+        service7Desc: "with Shell Scripting & Control-M",
+        service8Title: "Automation Workflows",
+        service8Desc: "via Google Cloud Scheduler & Workflows",
+        expertiseTitle: "Our Expertise",
+        expertiseIntro: "With over 10 years of experience in cloud architecture and software development, we bring deep technical knowledge and proven solutions to every project:",
+        expertise1Title: "Cloud & DevOps",
+        expertise1Item1: "Google Cloud Platform (GCP)",
+        expertise1Item2: "Kubernetes (GKE)",
+        expertise1Item3: "Terraform & Pulumi",
+        expertise1Item4: "Cloud Deploy & Skaffold",
+        expertise1Item5: "Helm & Docker",
+        expertise2Title: "Backend Development",
+        expertise2Item1: "Java (Spring Boot 3)",
+        expertise2Item2: "REST APIs & OpenAPI",
+        expertise2Item3: "Microservices Architecture",
+        expertise2Item4: "Database Integration",
+        expertise2Item5: "Batch Processing",
+        expertise3Title: "Automation & Security",
+        expertise3Item1: "GitHub Actions",
+        expertise3Item2: "CI/CD Pipelines",
+        expertise3Item3: "Stackdriver Monitoring",
+        expertise3Item4: "IAM & Security",
+        expertise3Item5: "Shell Scripting",
+        aboutTitle: "About Cloud DevXperts",
+        aboutText1: "Cloud DevXperts is a specialized consultancy focused on helping businesses leverage cloud technologies and DevOps practices to build scalable, reliable systems.",
+        aboutText2: "Founded by Henry Xiloj Herrera, we combine deep technical expertise with a passion for solving complex challenges through automation and best practices. Our approach emphasizes clean architecture, security, and maintainability from day one.",
+        contactTitle: "Get In Touch",
+        contactText: "Ready to discuss your project or learn how we can help? Send us a message and we'll get back to you within 24 hours.",
+        formName: "Your Name",
+        formEmail: "Your Email",
+        formMessage: "How can we help you?",
+        formSubmit: "Send Message",
+        formNamePlaceholder: "John Doe",
+        formEmailPlaceholder: "john@example.com",
+        formMessagePlaceholder: "Tell us about your project...",
+        footerText: "· Cloud & DevOps Specialists",
+        footerBlog: "Blog"
+      },
+      es: {
+        companyName: "Cloud DevXperts",
+        companyTagline: "Su socio en soluciones escalables de Cloud, DevOps y Backend",
+        navServices: "Servicios",
+        navExpertise: "Experiencia",
+        navContact: "Contacto",
+        servicesTitle: "Nuestros Servicios",
+        service1Title: "Infraestructura como Código",
+        service1Desc: "con Terraform & Pulumi",
+        service2Title: "Implementaciones en la Nube",
+        service2Desc: "con GCP, Kubernetes, Cloud SQL",
+        service3Title: "Pipelines CI/CD",
+        service3Desc: "usando GitHub Actions, Skaffold & Helm",
+        service4Title: "Microservicios Spring Boot",
+        service4Desc: "(Java 17 & 21)",
+        service5Title: "Diseño de API REST Seguras",
+        service5Desc: "con OpenAPI",
+        service6Title: "Monitoreo y Registros",
+        service6Desc: "usando Stackdriver",
+        service7Title: "Procesamiento por Lotes",
+        service7Desc: "con Shell Scripting & Control-M",
+        service8Title: "Flujos de Automatización",
+        service8Desc: "vía Google Cloud Scheduler & Workflows",
+        expertiseTitle: "Nuestra Experiencia",
+        expertiseIntro: "Con más de 10 años de experiencia en arquitectura en la nube y desarrollo de software, aportamos conocimiento técnico profundo y soluciones probadas a cada proyecto:",
+        expertise1Title: "Cloud & DevOps",
+        expertise1Item1: "Google Cloud Platform (GCP)",
+        expertise1Item2: "Kubernetes (GKE)",
+        expertise1Item3: "Terraform & Pulumi",
+        expertise1Item4: "Cloud Deploy & Skaffold",
+        expertise1Item5: "Helm & Docker",
+        expertise2Title: "Desarrollo Backend",
+        expertise2Item1: "Java (Spring Boot 3)",
+        expertise2Item2: "APIs REST & OpenAPI",
+        expertise2Item3: "Arquitectura de Microservicios",
+        expertise2Item4: "Integración con Bases de Datos",
+        expertise2Item5: "Procesamiento por Lotes",
+        expertise3Title: "Automatización & Seguridad",
+        expertise3Item1: "GitHub Actions",
+        expertise3Item2: "Pipelines CI/CD",
+        expertise3Item3: "Monitoreo con Stackdriver",
+        expertise3Item4: "IAM & Seguridad",
+        expertise3Item5: "Scripting en Shell",
+        aboutTitle: "Acerca de Cloud DevXperts",
+        aboutText1: "Cloud DevXperts es una consultoría especializada enfocada en ayudar a las empresas a aprovechar las tecnologías en la nube y las prácticas DevOps para construir sistemas escalables y confiables.",
+        aboutText2: "Fundada por Henry Xiloj Herrera, combinamos experiencia técnica profunda con una pasión por resolver desafíos complejos mediante automatización y mejores prácticas. Nuestro enfoque enfatiza arquitectura limpia, seguridad y mantenibilidad desde el primer día.",
+        contactTitle: "Contáctenos",
+        contactText: "¿Listo para discutir su proyecto o saber cómo podemos ayudarle? Envíenos un mensaje y nos pondremos en contacto dentro de 24 horas.",
+        formName: "Su Nombre",
+        formEmail: "Su Email",
+        formMessage: "¿Cómo podemos ayudarle?",
+        formSubmit: "Enviar Mensaje",
+        formNamePlaceholder: "Juan Pérez",
+        formEmailPlaceholder: "juan@ejemplo.com",
+        formMessagePlaceholder: "Cuéntenos sobre su proyecto...",
+        footerText: "· Especialistas en Cloud & DevOps",
+        footerBlog: "Blog"
+      }
+    };
+
+    // Language detection and switching
+    document.addEventListener('DOMContentLoaded', function() {
+      const languageBtn = document.getElementById('languageBtn');
+      const languageDropdown = document.getElementById('languageDropdown');
+      const currentLanguage = document.getElementById('currentLanguage');
+      
+      // Set initial language based on browser or location
+      let userLang = navigator.language || navigator.userLanguage;
+      userLang = userLang.substring(0, 2); // Get first 2 chars (en, es, etc.)
+      
+      // Check if we have translations for this language
+      if (!translations[userLang]) {
+        // Default to English if no translation available
+        userLang = 'en';
+        
+        // Special case for Spanish-speaking countries
+        const spanishSpeakingCountries = ['AR', 'BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'SV', 'GT', 'HN', 'MX', 'NI', 'PA', 'PY', 'PE', 'PR', 'ES', 'UY', 'VE'];
+        const userCountry = getUserCountry(); // Implement this if you want country-based detection
+        if (spanishSpeakingCountries.includes(userCountry)) {
+          userLang = 'es';
+        }
+      }
+      
+      // Apply initial language
+      applyLanguage(userLang);
+      
+      // Toggle language dropdown
+      languageBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        languageDropdown.classList.toggle('show');
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function() {
+        languageDropdown.classList.remove('show');
+      });
+      
+      // Language selection
+      document.querySelectorAll('.language-option').forEach(option => {
+        option.addEventListener('click', function() {
+          const lang = this.getAttribute('data-lang');
+          currentLanguage.textContent = lang.toUpperCase();
+          applyLanguage(lang);
+          languageDropdown.classList.remove('show');
+          
+          // Store preference in localStorage
+          localStorage.setItem('preferredLanguage', lang);
+        });
+      });
+    });
+    
+    // Apply language to all elements with data-i18n attribute
+    function applyLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+          
+          // Special case for input placeholders
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            const placeholderKey = key + 'Placeholder';
+            if (translations[lang][placeholderKey]) {
+              element.setAttribute('placeholder', translations[lang][placeholderKey]);
+            }
+          }
+        }
+      });
+      
+      // Update html lang attribute
+      document.documentElement.setAttribute('lang', lang);
+    }
+    
+    // Helper function to get user country (simplified version)
+    function getUserCountry() {
+      // In a real implementation, you might use an IP geolocation API
+      // This is a simplified version that just checks the browser's language settings
+      return '';
+    }
+  </script>
 </body>
 </html>
