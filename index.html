@@ -523,204 +523,103 @@
   </footer>
 
   <script>
-    // Language configuration
-    const translations = {
-      en: {
-        companyName: "Cloud DevXperts",
-        companyTagline: "Your Partner in Scalable Cloud, DevOps, and Backend Solutions",
-        navServices: "Services",
-        navExpertise: "Expertise",
-        navContact: "Contact",
-        servicesTitle: "Our Services",
-        service1Title: "Infrastructure as Code",
-        service1Desc: "with Terraform & Pulumi",
-        service2Title: "Cloud Deployments",
-        service2Desc: "with GCP, Kubernetes, Cloud SQL",
-        service3Title: "CI/CD Pipelines",
-        service3Desc: "using GitHub Actions, Skaffold & Helm",
-        service4Title: "Spring Boot Microservices",
-        service4Desc: "(Java 17 & 21)",
-        service5Title: "Secure REST API Design",
-        service5Desc: "with OpenAPI",
-        service6Title: "Monitoring & Logging",
-        service6Desc: "using Stackdriver",
-        service7Title: "Batch Processing",
-        service7Desc: "with Shell Scripting & Control-M",
-        service8Title: "Automation Workflows",
-        service8Desc: "via Google Cloud Scheduler & Workflows",
-        expertiseTitle: "Our Expertise",
-        expertiseIntro: "With over 10 years of experience in cloud architecture and software development, we bring deep technical knowledge and proven solutions to every project:",
-        expertise1Title: "Cloud & DevOps",
-        expertise1Item1: "Google Cloud Platform (GCP)",
-        expertise1Item2: "Kubernetes (GKE)",
-        expertise1Item3: "Terraform & Pulumi",
-        expertise1Item4: "Cloud Deploy & Skaffold",
-        expertise1Item5: "Helm & Docker",
-        expertise2Title: "Backend Development",
-        expertise2Item1: "Java (Spring Boot 3)",
-        expertise2Item2: "REST APIs & OpenAPI",
-        expertise2Item3: "Microservices Architecture",
-        expertise2Item4: "Database Integration",
-        expertise2Item5: "Batch Processing",
-        expertise3Title: "Automation & Security",
-        expertise3Item1: "GitHub Actions",
-        expertise3Item2: "CI/CD Pipelines",
-        expertise3Item3: "Stackdriver Monitoring",
-        expertise3Item4: "IAM & Security",
-        expertise3Item5: "Shell Scripting",
-        aboutTitle: "About Cloud DevXperts",
-        aboutText1: "Cloud DevXperts is a specialized consultancy focused on helping businesses leverage cloud technologies and DevOps practices to build scalable, reliable systems.",
-        aboutText2: "Founded by Henry Xiloj Herrera, we combine deep technical expertise with a passion for solving complex challenges through automation and best practices. Our approach emphasizes clean architecture, security, and maintainability from day one.",
-        contactTitle: "Get In Touch",
-        contactText: "Ready to discuss your project or learn how we can help? Send us a message and we'll get back to you within 24 hours.",
-        formName: "Your Name",
-        formEmail: "Your Email",
-        formMessage: "How can we help you?",
-        formSubmit: "Send Message",
-        formNamePlaceholder: "John Doe",
-        formEmailPlaceholder: "john@example.com",
-        formMessagePlaceholder: "Tell us about your project...",
-        footerText: "· Cloud & DevOps Specialists",
-        footerBlog: "Blog"
-      },
-      es: {
-        companyName: "Cloud DevXperts",
-        companyTagline: "Su socio en soluciones escalables de Cloud, DevOps y Backend",
-        navServices: "Servicios",
-        navExpertise: "Experiencia",
-        navContact: "Contacto",
-        servicesTitle: "Nuestros Servicios",
-        service1Title: "Infraestructura como Código",
-        service1Desc: "con Terraform & Pulumi",
-        service2Title: "Implementaciones en la Nube",
-        service2Desc: "con GCP, Kubernetes, Cloud SQL",
-        service3Title: "Pipelines CI/CD",
-        service3Desc: "usando GitHub Actions, Skaffold & Helm",
-        service4Title: "Microservicios Spring Boot",
-        service4Desc: "(Java 17 & 21)",
-        service5Title: "Diseño de API REST Seguras",
-        service5Desc: "con OpenAPI",
-        service6Title: "Monitoreo y Registros",
-        service6Desc: "usando Stackdriver",
-        service7Title: "Procesamiento por Lotes",
-        service7Desc: "con Shell Scripting & Control-M",
-        service8Title: "Flujos de Automatización",
-        service8Desc: "vía Google Cloud Scheduler & Workflows",
-        expertiseTitle: "Nuestra Experiencia",
-        expertiseIntro: "Con más de 10 años de experiencia en arquitectura en la nube y desarrollo de software, aportamos conocimiento técnico profundo y soluciones probadas a cada proyecto:",
-        expertise1Title: "Cloud & DevOps",
-        expertise1Item1: "Google Cloud Platform (GCP)",
-        expertise1Item2: "Kubernetes (GKE)",
-        expertise1Item3: "Terraform & Pulumi",
-        expertise1Item4: "Cloud Deploy & Skaffold",
-        expertise1Item5: "Helm & Docker",
-        expertise2Title: "Desarrollo Backend",
-        expertise2Item1: "Java (Spring Boot 3)",
-        expertise2Item2: "APIs REST & OpenAPI",
-        expertise2Item3: "Arquitectura de Microservicios",
-        expertise2Item4: "Integración con Bases de Datos",
-        expertise2Item5: "Procesamiento por Lotes",
-        expertise3Title: "Automatización & Seguridad",
-        expertise3Item1: "GitHub Actions",
-        expertise3Item2: "Pipelines CI/CD",
-        expertise3Item3: "Monitoreo con Stackdriver",
-        expertise3Item4: "IAM & Seguridad",
-        expertise3Item5: "Scripting en Shell",
-        aboutTitle: "Acerca de Cloud DevXperts",
-        aboutText1: "Cloud DevXperts es una consultoría especializada enfocada en ayudar a las empresas a aprovechar las tecnologías en la nube y las prácticas DevOps para construir sistemas escalables y confiables.",
-        aboutText2: "Fundada por Henry Xiloj Herrera, combinamos experiencia técnica profunda con una pasión por resolver desafíos complejos mediante automatización y mejores prácticas. Nuestro enfoque enfatiza arquitectura limpia, seguridad y mantenibilidad desde el primer día.",
-        contactTitle: "Contáctenos",
-        contactText: "¿Listo para discutir su proyecto o saber cómo podemos ayudarle? Envíenos un mensaje y nos pondremos en contacto dentro de 24 horas.",
-        formName: "Su Nombre",
-        formEmail: "Su Email",
-        formMessage: "¿Cómo podemos ayudarle?",
-        formSubmit: "Enviar Mensaje",
-        formNamePlaceholder: "Juan Pérez",
-        formEmailPlaceholder: "juan@ejemplo.com",
-        formMessagePlaceholder: "Cuéntenos sobre su proyecto...",
-        footerText: "· Especialistas en Cloud & DevOps",
-        footerBlog: "Blog"
-      }
-    };
+    // Enhanced geolocation function
+    async function getUserCountry() {
+      // First check localStorage for saved preference
+      const savedLang = localStorage.getItem('preferredLanguage');
+      if (savedLang) return savedLang === 'es' ? 'ES' : 'US';
+      
+      // Try HTML5 Geolocation API first
+      return new Promise((resolve) => {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            async (position) => {
+              try {
+                const {latitude, longitude} = position.coords;
+                const response = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`);
+                const data = await response.json();
+                resolve(data.countryCode);
+              } catch (e) {
+                resolve(getCountryFromOtherMethods());
+              }
+            },
+            () => resolve(getCountryFromOtherMethods())
+          );
+        } else {
+          resolve(getCountryFromOtherMethods());
+        }
+      });
+    }
 
-    // Language detection and switching
-    document.addEventListener('DOMContentLoaded', function() {
+    // Fallback methods for country detection
+    function getCountryFromOtherMethods() {
+      // 1. Check browser's timezone
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (timezone) {
+        const tzCountry = timezone.split('/')[0];
+        if (tzCountry === 'America') return 'US';
+        if (tzCountry === 'Europe') return 'ES'; // Default to Spain for Europe
+      }
+      
+      // 2. Check browser language
+      const userLang = navigator.language || navigator.userLanguage || 'en-US';
+      if (userLang.includes('es')) return 'ES';
+      
+      // Default to US
+      return 'US';
+    }
+
+    // Language detection and switching (updated)
+    document.addEventListener('DOMContentLoaded', async function() {
       const languageBtn = document.getElementById('languageBtn');
       const languageDropdown = document.getElementById('languageDropdown');
       const currentLanguage = document.getElementById('currentLanguage');
       
-      // Set initial language based on browser or location
-      let userLang = navigator.language || navigator.userLanguage;
-      userLang = userLang.substring(0, 2); // Get first 2 chars (en, es, etc.)
+      // Set initial language based on multiple factors
+      let userLang = 'en'; // Default
+      const spanishSpeakingCountries = ['AR', 'BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'SV', 'GT', 'HN', 'MX', 'NI', 'PA', 'PY', 'PE', 'PR', 'ES', 'UY', 'VE'];
       
-      // Check if we have translations for this language
-      if (!translations[userLang]) {
-        // Default to English if no translation available
-        userLang = 'en';
+      try {
+        // Get user country (using our enhanced function)
+        const userCountry = await getUserCountry();
         
-        // Special case for Spanish-speaking countries
-        const spanishSpeakingCountries = ['AR', 'BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'SV', 'GT', 'HN', 'MX', 'NI', 'PA', 'PY', 'PE', 'PR', 'ES', 'UY', 'VE'];
-        const userCountry = getUserCountry(); // Implement this if you want country-based detection
+        // Check if country is Spanish-speaking
         if (spanishSpeakingCountries.includes(userCountry)) {
           userLang = 'es';
         }
+        
+        // Check localStorage for override
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang && translations[savedLang]) {
+          userLang = savedLang;
+        }
+      } catch (e) {
+        console.log("Geolocation error, using default language");
       }
       
       // Apply initial language
       applyLanguage(userLang);
       
-      // Toggle language dropdown
+      // Rest of your existing language switching code...
       languageBtn.addEventListener('click', function(e) {
         e.stopPropagation();
         languageDropdown.classList.toggle('show');
       });
       
-      // Close dropdown when clicking outside
       document.addEventListener('click', function() {
         languageDropdown.classList.remove('show');
       });
       
-      // Language selection
       document.querySelectorAll('.language-option').forEach(option => {
         option.addEventListener('click', function() {
           const lang = this.getAttribute('data-lang');
           currentLanguage.textContent = lang.toUpperCase();
           applyLanguage(lang);
           languageDropdown.classList.remove('show');
-          
-          // Store preference in localStorage
           localStorage.setItem('preferredLanguage', lang);
         });
       });
     });
-    
-    // Apply language to all elements with data-i18n attribute
-    function applyLanguage(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          element.textContent = translations[lang][key];
-          
-          // Special case for input placeholders
-          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            const placeholderKey = key + 'Placeholder';
-            if (translations[lang][placeholderKey]) {
-              element.setAttribute('placeholder', translations[lang][placeholderKey]);
-            }
-          }
-        }
-      });
-      
-      // Update html lang attribute
-      document.documentElement.setAttribute('lang', lang);
-    }
-    
-    // Helper function to get user country (simplified version)
-    function getUserCountry() {
-      // In a real implementation, you might use an IP geolocation API
-      // This is a simplified version that just checks the browser's language settings
-      return '';
-    }
-  </script>
+</script>
 </body>
 </html>
